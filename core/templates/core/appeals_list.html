@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <br><a href="/addappeal/">Appeal Create</a>
+
+    <ol>
+        {% for i in queryset %}
+        <li>{{ i }}</li>
+        {% endfor %}
+    </ol>
+{% endblock %}

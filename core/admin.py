@@ -7,6 +7,6 @@ class Weather(admin.ModelAdmin):
     list_display = ('name',)
 
 
-@admin.register(models.Appointment)
+@admin.register(models.Appeal)
 class Weather(admin.ModelAdmin):
-    list_display = ('doctor', 'created_date')
+    list_display = ('doctor', 'appeal_date', 'appeal_time', 'created_date')

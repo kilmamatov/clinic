@@ -1,0 +1,9 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <ol>
+        {% for i in queryset %}
+        <li><a href="/doctor/{{i.id}}/">{{ i }}</a></li>
+        {% endfor %}
+    </ol>
+{% endblock %}
