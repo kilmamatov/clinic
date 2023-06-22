@@ -1,0 +1,9 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <br>Врач: {{ appeal.doctor.name }} ({{ appeal.doctor.specialization }})
+    <br>Ваше имя: {{ appeal.patient_name }}
+    <br>Дата приема: {{ appeal.appeal_date }}
+    <br>Время приема: {{ appeal.appeal_time }}
+    <br>Ваша почта: {{ appeal.patient_email }}
+{% endblock %}

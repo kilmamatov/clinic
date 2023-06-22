@@ -17,10 +17,22 @@ class DoctorList(ListView):
     context_object_name = 'queryset'
 
 
+class DoctorDetail(DetailView):
+    template_name = 'core/doctor.html'
+    model = models.Doctor
+    context_object_name = 'doctor'
+
+
 class AppealsList(ListView):
     template_name = 'core/appeals_list.html'
     model = models.Appeal
     context_object_name = 'queryset'
+
+
+class AppealDetail(DetailView):
+    template_name = 'core/appeal.html'
+    model = models.Appeal
+    context_object_name = 'appeal'
 
 
 class AppealCreate(CreateView):
@@ -47,11 +59,6 @@ class AppealCreate(CreateView):
                           )
         return super().form_valid(form)
 
-
-class DoctorDetail(DetailView):
-    template_name = 'core/doctor.html'
-    model = models.Doctor
-    context_object_name = 'doctor'
 
 
 

@@ -5,7 +5,7 @@
 
     <ol>
         {% for i in queryset %}
-        <li>{{ i }}</li>
+        <li><a href="/appeal/{{i.id}}/">{{ i }}</a> ({{ i.doctor }})
         {% endfor %}
     </ol>
 {% endblock %}
