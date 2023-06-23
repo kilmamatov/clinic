@@ -41,9 +41,9 @@ class AppealDelete(DeleteView):
 
 
 class AppealUpdate(UpdateView):
-    template_name = 'core/appeal_update.html'
     model = models.Appeal
     form_class = forms.Appeal
+    template_name = 'core/appeal_update.html'
     success_url = reverse_lazy('appeals')
 
     def form_valid(self, form):

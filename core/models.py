@@ -4,6 +4,7 @@ from django.db import models
 class Doctor(models.Model):
     name = models.CharField('Имя', max_length=255)
     specialization = models.CharField('Специализация', max_length=255)
+    text = models.TextField('Описание')
 
     class Meta:
         ordering = ('specialization',)
