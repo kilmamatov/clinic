@@ -6,4 +6,14 @@
     <br>Дата приема: {{ appeal.appeal_date }}
     <br>Время приема: {{ appeal.appeal_time }}
     <br>Ваша почта: {{ appeal.patient_email }}
+    <br><a href="{% url 'updappeal' pk=appeal.id %}">Редактировать</a>
+    <form action="/delappeal/{{appeal.id}}/" method="post">
+        {% csrf_token %}
+        <button type="submit">Удалить запись</button>
+    </form>
+
+<!--    <form action="/appeal/update/{{appeal.id}}/" method="get">-->
+<!--        {% csrf_token %}-->
+<!--        <button type="submit">Редактировать запись</button>-->
+<!--    </form>-->
 {% endblock %}
