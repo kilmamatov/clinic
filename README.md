@@ -5,6 +5,8 @@ source venv/bin/activate (активируем его)
 
 pip install -r requirements.txt (устанавливаем все зависимости)
 
+./manage.py migrate (Производим миграции и создаем базу данных)
+
 только первый раз для создания проекта (ЕЩЕ РАЗ ПРОПИСЫВАТЬ НЕ НУЖНО) {
 
 django-admin startproject project . (создаем проект джанго)
